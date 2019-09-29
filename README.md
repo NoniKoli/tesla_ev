@@ -31,7 +31,7 @@ In the future these may be integrated into frameworks and/or include their own s
             - Low RPMs benefit from less energy use
 - EV Charger
     - Featuring the Tesla Supercharger 3D model
-        - Via an included custom map: `wtf_tesla_supercharger`
+        - Via an included custom map: `tesla_supercharger`
     - Charging uses a quadratic Bezier curve
         - 0-60% takes ~30% of total charge time
         - &gt;61% takes the remaining time to reach full charge
