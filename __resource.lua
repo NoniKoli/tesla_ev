@@ -1,5 +1,5 @@
 client_scripts {
-	'@wtf_redis/lib/redis.lua',
+	'@tesla_redis/lib/redis.lua',
 
 	'config.lua',
 
@@ -17,5 +17,5 @@ client_scripts {
 }
 
 dependencies {
-	"wtf_redis"
+	"tesla_redis"
 }
