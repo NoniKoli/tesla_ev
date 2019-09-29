@@ -1,4 +1,4 @@
-# wtf_ev
+# tesla_ev
 
 FiveM Electric Vehicle HUD, battery, charging, garage-charging
 
@@ -11,13 +11,13 @@ In the future these may be integrated into frameworks and/or include their own s
 
 ## Requirements
 
- - [wtf_redis]
-    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [wtf_redis] library.
-    - The default configuration is to use in-memory, but if you want to test out [wtf_redis], have a Redis server running on the same machine as the host.
+ - [tesla_redis]
+    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [tesla_redis] library.
+    - The default configuration is to use in-memory, but if you want to test out [tesla_redis], have a Redis server running on the same machine as the host.
     - Changing `Config.Garage.DB = DB.Client` to `Config.Garage.DB = DB.Redis` will switch the persitence method.
-    - [wtf_redis] is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [wtf_redis], and change this, is in the works. 
+    - [tesla_redis] is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [tesla_redis], and change this, is in the works. 
 
-## wtf_ev
+## tesla_ev
 
 - EV HUD
     - EV vehicles display Whr (watt-hours) energy use
@@ -44,36 +44,36 @@ In the future these may be integrated into frameworks and/or include their own s
 
 ## Download & Installation
 
-This resource was developed alongside [wtf_teslax], [wtf_tesla_supercharger]. This resource works without them, but you might be interested in installing them altogether.
+This resource was developed alongside [tesla_modelx], [tesla_supercharger]. This resource works without them, but you might be interested in installing them altogether.
 
 ### Using Git
 ```
 cd resources
-git clone https://github.com/wtf-fivem-mods/wtf_ev [wtf]/wtf_ev/
-git clone https://github.com/wtf-fivem-mods/wtf_redis [wtf]/wtf_redis/
+git clone https://github.com/boostvolt/tesla_ev [tesla]/tesla_ev/
+git clone https://github.com/boostvolt/tesla_redis [tesla]/tesla_redis/
 
-git clone https://github.com/wtf-fivem-mods/wtf_teslax [wtf]/wtf_teslax/
-git clone https://github.com/wtf-fivem-mods/wtf_tesla_supercharger [wtf]/wtf_tesla_supercharger/
+git clone https://github.com/boostvolt/tesla_modelx [tesla]/tesla_modelx/
+git clone https://github.com/boostvolt/tesla_supercharger [tesla]/tesla_supercharger/
 ```
 
 ### Manually
-- Download https://github.com/wtf-fivem-mods/wtf_ev/archive/master.zip
-- Create and place in in `[wtf]/wtf_ev` directory
+- Download https://github.com/boostvolt/tesla_ev/archive/master.zip
+- Create and place in in `[tesla]/tesla_ev` directory
 
 ## Installation
 - Add this in your `server.cfg`:
 
 ```lua
-start wtf_ev
+start tesla_ev
 -- if you downloaded related resources
-start wtf_teslax
-start wtf_tesla_supercharger
+start tesla_modelx
+start tesla_supercharger
 ```
 
 ## Debug
 - Debug commands available when `Config.Debug = True`
-- `/teslax` spawns and places you in the Tesla Model X
-- `/fuel 40` will set fuel to specified amount (40 as an example)
+- `/modelx` spawns and places you in the Tesla Model X
+- `/charge 40` will set fuel to specified amount (40 as an example)
 
 ## Screenshots
 
@@ -89,6 +89,6 @@ start wtf_tesla_supercharger
 
 ![photo_2019-04-14_00-43-29 (1)](https://user-images.githubusercontent.com/79330/56089931-47b54480-5e4f-11e9-9bdf-5183bf6a9ec6.jpg)
 
-[wtf_teslax]: https://github.com/wtf-fivem-mods/wtf_teslax
-[wtf_tesla_supercharger]: https://github.com/wtf-fivem-mods/wtf_tesla_supercharger
-[wtf_redis]: https://github.com/wtf-fivem-mods/wtf_redis
+[tesla_modelx]: https://github.com/boostvolt/tesla_modelx
+[tesla_tesla_supercharger]: https://github.com/boostvolt/tesla_supercharger
+[tesla_redis]: https://github.com/boostvolt/tesla_redis
