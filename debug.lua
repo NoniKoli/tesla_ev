@@ -1,7 +1,7 @@
 if Config.Debug then
     --- Set fuel in chat
     -- /fuel <0.100>
-    RegisterCommand('fuel', function(_, args, _)
+    RegisterCommand('charge', function(_, args, _)
         local level = args[1]
         local vehicle = GetPlayersLastVehicle()
         if vehicle then
@@ -11,8 +11,8 @@ if Config.Debug then
 
     --- Spawns teslax for testing
     -- Requires wtf_teslax resource to be installed and started
-    RegisterCommand('teslax', function()
-        local modelHash = GetHashKey('teslax')
+    RegisterCommand('modelx', function()
+        local modelHash = GetHashKey('modelx')
         RequestModel(modelHash)
         Citizen.CreateThread(function()
             local t = 0
@@ -21,7 +21,7 @@ if Config.Debug then
                 t = t + 100
                 if t > 5000 then
                     SetNotificationTextEntry("STRING")
-                    AddTextComponentSubstringPlayerName("/teslax failed. The resource must be installed and started.")
+                    AddTextComponentSubstringPlayerName("/modelx failed. The resource must be installed and started.")
                     DrawNotification(false, false)
                     break
                 end
