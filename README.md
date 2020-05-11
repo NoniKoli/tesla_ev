@@ -9,16 +9,6 @@ This resource was created for demonstration purposes. Some features are basic, l
 
 In the future these may be integrated into frameworks and/or include their own server side/persistence logic.
 
-## Requirements
-
- - [tesla_redis]
-    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [tesla_redis] library.
-    - The default configuration is to use in-memory, but if you want to test out [tesla_redis], have a Redis server running on the same machine as the host.
-    - Changing `Config.Garage.DB = DB.Client` to `Config.Garage.DB = DB.Redis` will switch the persitence method.
-    - [tesla_redis] is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [tesla_redis], and change this, is in the works. 
-
-## tesla_ev
-
 - EV HUD
     - EV vehicles display Whr (watt-hours) energy use
     - This figure is based on "RPMs" and Whr effects battery range
@@ -42,18 +32,30 @@ In the future these may be integrated into frameworks and/or include their own s
     - Supports custom charging rates via `config.lua`
         - Example: parking-garages charge faster than parking lots, which are faster than house-garages
 
+## Requirements
+
+ - [tesla_redis]
+    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [tesla_redis] library.
+    - The default configuration is to use in-memory, but if you want to test out [tesla_redis], have a Redis server running on the same machine as the host.
+    - Changing `Config.Garage.DB = DB.Client` to `Config.Garage.DB = DB.Redis` will switch the persitence method.
+    - [tesla_redis] is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [tesla_redis], and change this, is in the works. 
+    
+## Chargeable cars
+- [Tesla Model S](https://github.com/boostvolt/tesla_models)
+- [Tesla Model X](https://github.com/boostvolt/tesla_modelx)
+- [Tesla Model 3](https://github.com/boostvolt/tesla_model3)
+- [Tesla Model Y](https://github.com/boostvolt/tesla_model3)
+- [Tesla Cybertruck](https://github.com/boostvolt/tesla_cybertruck)
+- [Tesla Roadster](https://github.com/boostvolt/tesla_roadster)
+
 ## Download & Installation
 
-This resource was developed alongside [tesla_modelx], [tesla_supercharger]. This resource works without them, but you might be interested in installing them altogether.
+This resource was developed alongside [tesla_supercharger](https://github.com/boostvolt/tesla_supercharger), [tesla_redis](https://github.com/Boostvolt/tesla_redis). This resource will not work without them, so you will need to install them as well.
 
 ### Using Git
 ```
 cd resources
 git clone https://github.com/boostvolt/tesla_ev [tesla]/tesla_ev/
-git clone https://github.com/boostvolt/tesla_redis [tesla]/tesla_redis/
-
-git clone https://github.com/boostvolt/tesla_modelx [tesla]/tesla_modelx/
-git clone https://github.com/boostvolt/tesla_supercharger [tesla]/tesla_supercharger/
 ```
 
 ### Manually
@@ -65,9 +67,6 @@ git clone https://github.com/boostvolt/tesla_supercharger [tesla]/tesla_supercha
 
 ```lua
 start tesla_ev
--- if you downloaded related resources
-start tesla_modelx
-start tesla_supercharger
 ```
 
 ## Debug
@@ -88,10 +87,6 @@ start tesla_supercharger
 ![photo_2019-04-14_00-43-29 (2)](https://user-images.githubusercontent.com/79330/56089930-4552ea80-5e4f-11e9-8ac3-8dbdf466dc5a.jpg)
 
 ![photo_2019-04-14_00-43-29 (1)](https://user-images.githubusercontent.com/79330/56089931-47b54480-5e4f-11e9-9bdf-5183bf6a9ec6.jpg)
-
-[tesla_modelx]: https://github.com/boostvolt/tesla_modelx
-[tesla_tesla_supercharger]: https://github.com/boostvolt/tesla_supercharger
-[tesla_redis]: https://github.com/boostvolt/tesla_redis
 
 ## License
 
