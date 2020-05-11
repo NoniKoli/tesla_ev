@@ -34,11 +34,11 @@ In the future these may be integrated into frameworks and/or include their own s
 
 ## Requirements
 
- - [tesla_redis]
-    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [tesla_redis] library.
-    - The default configuration is to use in-memory, but if you want to test out [tesla_redis], have a Redis server running on the same machine as the host.
+ - [tesla_redis](https://github.com/Boostvolt/tesla_redis)
+    - The `garagedemo/config.lua` offers the ability switch between in-memory (client) persistence and actual persistence using our [tesla_redis](https://github.com/Boostvolt/tesla_redis) library.
+    - The default configuration is to use in-memory, but if you want to test out [tesla_redis](https://github.com/Boostvolt/tesla_redis), have a Redis server running on the same machine as the host.
     - Changing `Config.Garage.DB = DB.Client` to `Config.Garage.DB = DB.Redis` will switch the persitence method.
-    - [tesla_redis] is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [tesla_redis], and change this, is in the works. 
+    - [tesla_redis](https://github.com/Boostvolt/tesla_redis) is in early development, currently expects the server to be at `127.0.0.1:6379`. The ability to configure [tesla_redis](https://github.com/Boostvolt/tesla_redis), and change this, is in the works. 
     
 ## Chargeable cars
 - [Tesla Model S](https://github.com/boostvolt/tesla_models)
@@ -50,7 +50,7 @@ In the future these may be integrated into frameworks and/or include their own s
 
 ## Download & Installation
 
-This resource was developed alongside [tesla_supercharger](https://github.com/boostvolt/tesla_supercharger), [tesla_redis](https://github.com/Boostvolt/tesla_redis). This resource will not work without them, so you will need to install them as well.
+This resource was developed alongside [tesla_redis](https://github.com/Boostvolt/tesla_redis). This resource will not work without them, so you will need to install them as well.
 
 ### Using Git
 ```
