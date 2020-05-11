@@ -49,7 +49,7 @@ In the future these may be integrated into frameworks and/or include their own s
 - [Tesla Roadster](https://github.com/boostvolt/tesla_roadster)
 - [Tesla Semi](https://github.com/boostvolt/tesla_semi)
 
-## Download & Installation
+## Download
 
 This resource was developed alongside [tesla_redis](https://github.com/Boostvolt/tesla_redis). This resource will not work without them, so you will need to install them as well.
 
